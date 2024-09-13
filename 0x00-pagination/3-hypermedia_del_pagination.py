@@ -66,7 +66,7 @@ class Server:
         next_index = None
         start = index if index else 0
         for i, item in data.items():
-            if i >= start and cnt< page_size:
+            if i >= start and cnt < page_size:
                 page_data.append(item)
                 cnt += 1
                 continue
