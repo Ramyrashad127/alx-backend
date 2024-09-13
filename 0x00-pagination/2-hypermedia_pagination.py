@@ -48,7 +48,7 @@ class Server:
         """hypermedia paginations"""
         data = self.get_page(page, page_size)
         st, en = index_range(page, page_size)
-        total_pages = len(self.__dataset) / page_size
+        total_pages = math.ceil(len(self.__dataset) / page_size)
         meta_data = {
                     'page_siae': page_size,
                     'page': page,
