@@ -50,7 +50,7 @@ def before_request():
 @app.route('/')
 def hmoe() -> Any:
     """diplay home page"""
-    return render_template('3-index.html')
+    return render_template('5-index.html')
 
 
 @babel.localeselector
