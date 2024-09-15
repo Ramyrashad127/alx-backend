@@ -5,6 +5,7 @@
 from flask import Flask, render_template, request, g
 from flask_babel import Babel
 from typing import Any
+from typing import Dict, Union
 
 
 class Config:
@@ -30,7 +31,7 @@ users = {
 }
 
 
-def get_user():
+def get_user() -> Union[Dict, None]:
     """Get user or return None"""
     login_id = request.args.get('login_as')
     if login_id:
@@ -41,7 +42,7 @@ def get_user():
 
 
 @app.before_request
-def before_request():
+def before_request() -> None:
     """Before request method to find user"""
     user = get_user()
     g.user = user
