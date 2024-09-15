@@ -25,7 +25,7 @@ babel = Babel(app)
 @app.route('/')
 def hmoe() -> Any:
     """diplay home page"""
-    return render_template('1-index.html')
+    return render_template('2-index.html')
 
 
 @babel.localeselector
